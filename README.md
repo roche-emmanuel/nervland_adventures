@@ -6,11 +6,19 @@ Collection of small experiments and coding adventures with my NervLand engine pr
 
 # The experiments
 
-## 001 - GPU Reduction algorithm
+## 001 - WGPU Reduction algorithm
 
-- Folder: **001_gpu_reduction**
+- Folder: **001_wgpu_reduction**
 - References:
   - Video Tutorial Part 1: https://www.youtube.com/watch?v=198AoKCB90o
   - Video Tutorial Part 2: https://www.youtube.com/watch?v=R0P9DDRCQ68
 
 This is currently provided as a single C++ unit test file and a collection of wgsl shader files implementing different versions of the reduction algorithm. The unit test will execute the computation with each version and monitor the time taken to compute the bandwidth of the compute shader.
+
+## 002 - WGPU Prefix Sum
+
+- Folder: **002_wgpu_prefix_sum**
+- References:
+  - Video Tutorial: https://www.youtube.com/watch?v=wD2RezUqaxc
+
+This experiment is a simple continuation from the previous one on the reduction algorithms, this time focusing on prefix-sum computation in WGSL. Again, we are only providing some minimal unit test code in C++ here and the different versions of the compute shaders which may be used as reference for integration into another WebGPU based engine.
