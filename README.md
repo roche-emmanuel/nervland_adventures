@@ -22,3 +22,13 @@ This is currently provided as a single C++ unit test file and a collection of wg
   - Video Tutorial: https://www.youtube.com/watch?v=wD2RezUqaxc
 
 This experiment is a simple continuation from the previous one on the reduction algorithms, this time focusing on prefix-sum computation in WGSL. Again, we are only providing some minimal unit test code in C++ here and the different versions of the compute shaders which may be used as reference for integration into another WebGPU based engine.
+
+## 003 - WGPU Native/WASM app
+
+- Folder: **003_wgpu_native_wasm_app**
+- References:
+  - Video Tutorial: **to be released**
+
+In this folder you will find the 4 test applications I built to reach a simple code base which could now be used to build a WebGPU base app both as a native application or as a WASM application to run in your browser.
+
+Those test apps do not depend on the NervLand libraries so it should be possible to build them with the provided code without too much trouble (assuming you have a proper emscripten toolchain available for the build process)
