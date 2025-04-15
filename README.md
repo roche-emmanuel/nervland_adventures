@@ -43,7 +43,7 @@ Those test apps do not depend on the NervLand libraries so it should be possible
 
 ## 006 - TerrainView7
 
-![TerrainView7](006_terrainview7/terrainview7_preview.png)
+![TerrainView7](experiments/006_terrainview7/terrainview7_preview.png)
 
 The TerrainView7 tech demo app introduces support for the Precomputed Atmospheric Scattering on the terrain rendering layer.
 
