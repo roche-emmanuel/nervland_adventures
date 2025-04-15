@@ -32,3 +32,20 @@ This experiment is a simple continuation from the previous one on the reduction 
 In this folder you will find the 4 test applications I built to reach a simple code base which could now be used to build a WebGPU base app both as a native application or as a WASM application to run in your browser.
 
 Those test apps do not depend on the NervLand libraries so it should be possible to build them with the provided code without too much trouble (assuming you have a proper emscripten toolchain available for the build process)
+
+## 004 - TerrainView5
+
+**TODO**
+
+## 005 - TerrainView6
+
+**TODO**
+
+## 006 - TerrainView7
+
+![TerrainView7](006_terrainview7/terrainview7_preview.png)
+
+The TerrainView7 tech demo app introduces support for the Precomputed Atmospheric Scattering on the terrain rendering layer.
+
+- If your browser supports WebGPU, you can give this demo a try at: https://nervtech.org/terrainview7
+- And if you want a quick overview on the new features/changes I introduced in this release compared to the **TerrainView6**, you can check the companion video at: https://youtu.be/85-VGX808xA
