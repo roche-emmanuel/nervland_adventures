@@ -48,4 +48,38 @@ Those test apps do not depend on the NervLand libraries so it should be possible
 The TerrainView7 tech demo app introduces support for the Precomputed Atmospheric Scattering on the terrain rendering layer.
 
 - If your browser supports WebGPU, you can give this demo a try at: https://nervtech.org/terrainview7
-- And if you want a quick overview on the new features/changes I introduced in this release compared to the **TerrainView6**, you can check the companion video at: https://youtu.be/85-VGX808xA
+- And if you want a quick overview on the new features/changes I introduced in this release compared to the **TerrainView6**, you can check the companion video at: https://www.youtube.com/watch?v=85-VGX808xA
+
+## 007 - TerrainView8
+
+![TerrainView8](experiments/007_terrainview8/terrainview8_preview.png)
+
+The TerrainView8 tech demo app introduces support for **Real-time Realistic Ocean Lighting using Seamless Transitions from Geometry to BRDF**.
+
+- If your browser supports WebGPU, you can give this demo a try at: https://nervtech.org/terrainview8
+- And if you want a quick overview on the new features introduced in this release you can check the companion video at: https://www.youtube.com/watch?v=uUomhFu364I
+
+The ocean surface rendering is based on the implementation from Eric Bruneton's paper "Real-time Realistic Ocean Lighting using Seamless Transitions from Geometry to BRDF" (available at: https://hal.science/inria-00443630) which itself uses the model from Elfouhaily's paper "A unified directional spectrum for long and short wind-driven waves" (https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/97jc00467)
+
+The main contribution I'm introducing here is a full port of the spectrum/slopes variance/FFT computation in WebGPU compute shaders (original version is computing the spectrum only on CPU) plus a few extensions to support foam display at the top of the waves and at shores, as well as dynamic control on the wind direction.
+
+This algorithm also handles displaying the sea bedrock surface under the water surface using a simple Beer-Lambert Law application.
+
+There is still some work to do on this, including the following points:
+
+- [ ] Support for underwater sea surface display
+- [ ] Caustics display
+- [ ] Improvements on the screen grid projection range
+- [ ] Local ocean parameters control
+- [ ] Better foam rendering and addition of sea spray
+- [ ] Improvements on the shore waves display
+
+## 008 - FFmpeg video Playback in Native WGPU
+
+![FFmpeg Playback](experiments/008_ffmpeg_video_playback/ffmpeg_video_in_nervland.png)
+
+This experiment was a simple test to try to use the "Shared Texture" API from Dawn by importing an ffmpeg video stream generated with DirectX 11.
+
+The code files here are provided as **basic reference**, they will not compile out of the box as this depends on the NervLand engine which is not open-sourced for now. But this will anyway provide a good overview on most of the specific points to consider to setup the video stream playback with full hardware acceleration.
+
+**Note:** This experiment was implemented **on Windows only**, linux would require a different processing pipeline obviously 😄.
