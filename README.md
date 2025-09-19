@@ -83,3 +83,5 @@ This experiment was a simple test to try to use the "Shared Texture" API from Da
 The code files here are provided as **basic reference**, they will not compile out of the box as this depends on the NervLand engine which is not open-sourced for now. But this will anyway provide a good overview on most of the specific points to consider to setup the video stream playback with full hardware acceleration.
 
 **Note:** This experiment was implemented **on Windows only**, linux would require a different processing pipeline obviously 😄.
+
+- A video tutorial on how to implement this feature is available at: https://www.youtube.com/watch?v=P1jxvLm6SwE
