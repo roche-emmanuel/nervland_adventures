@@ -85,3 +85,15 @@ The code files here are provided as **basic reference**, they will not compile o
 **Note:** This experiment was implemented **on Windows only**, linux would require a different processing pipeline obviously 😄.
 
 - A video tutorial on how to implement this feature is available at: https://www.youtube.com/watch?v=P1jxvLm6SwE
+
+## 009 - Procedural Voronoi Texture Generation
+
+![Procedural Voronoi](experiments/009_procedural_voronoi/voronoi_quad_in_nervland.png)
+
+In this experiment we generate a Procedural Voronoi Texture from scratches in a compute shader.
+
+The implementation was done iteratively to build it as a beginner friendly tutorial.
+
+So in the experiment folder you will find different version of the shader used to do the computation with growing complexity.
+
+- A video tutorial on how to implement this procedural texture generation is also available at: **TODO: add link here when the video is released 😉**
