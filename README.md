@@ -96,4 +96,5 @@ The implementation was done iteratively to build it as a beginner friendly tutor
 
 So in the experiment folder you will find different version of the shader used to do the computation with growing complexity.
 
-- A video tutorial on how to implement this procedural texture generation is also available at: **TODO: add link here when the video is released 😉**
+- A video tutorial on how to implement this procedural texture generation is also available at: https://www.youtube.com/watch?v=kNgqw7HKzmg
+- And if you prefer a reading version I also have an article for this on dev.to: [Procedural Voronoi Texture generation in WGPU](https://dev.to/the_lone_engineer/tutorial-procedural-voronoi-texture-generation-in-wgpu-1b3k)
