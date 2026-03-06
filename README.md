@@ -91,7 +91,7 @@ GPU-based parallel reduction implementations with performance benchmarking.
 - Multiple shader variants exploring different optimization strategies
 - Bandwidth monitoring and performance analysis
 - 📺 [Tutorial Part 1](https://www.youtube.com/watch?v=198AoKCB90o) | [Part 2](https://www.youtube.com/watch?v=R0P9DDRCQ68)
-- 📁 `001_wgpu_reduction/`
+- 📁 `experiments/001_wgpu_reduction/`
 
 ---
 
@@ -102,7 +102,7 @@ Parallel prefix sum (scan) algorithm implementation in WGSL compute shaders.
 - Building on reduction algorithm concepts
 - Multiple optimization variants
 - 📺 [Tutorial Video](https://www.youtube.com/watch?v=wD2RezUqaxc)
-- 📁 `002_wgpu_prefix_sum/`
+- 📁 `experiments/002_wgpu_prefix_sum/`
 
 ---
 
@@ -113,11 +113,11 @@ Cross-platform WebGPU application framework supporting both native and web deplo
 - **Self-contained** — No NervLand dependencies, can be built standalone
 - Emscripten toolchain for WASM compilation
 - Single codebase for native and browser targets
-- 📁 `003_wgpu_native_wasm_app/`
+- 📁 `experiments/003_wgpu_native_wasm_app/`
 
 ---
 
-### 008 — FFmpeg Video Playback in Native WGPU
+### 004 — FFmpeg Video Playback in Native WGPU
 
 ![FFmpeg Playback](images/ffmpeg_video_in_nervland.png)
 
@@ -132,7 +132,7 @@ Hardware-accelerated video playback using DirectX 11 and Dawn's Shared Texture A
 
 ---
 
-### 009 — Procedural Voronoi Texture Generation
+### 005 — Procedural Voronoi Texture Generation
 
 ![Procedural Voronoi](images/voronoi_quad_in_nervland.png)
 
@@ -143,7 +143,7 @@ GPU-based procedural Voronoi diagram generation with progressive complexity.
 - Complete compute shader workflow
 - 📺 [Video Tutorial](https://www.youtube.com/watch?v=kNgqw7HKzmg)
 - 📝 [Written Tutorial](https://dev.to/the_lone_engineer/tutorial-procedural-voronoi-texture-generation-in-wgpu-1b3k)
-- 📁 `experiments/009_procedural_voronoi/`
+- 📁 `experiments/005_procedural_voronoi/`
 
 ---
 
