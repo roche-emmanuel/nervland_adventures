@@ -181,7 +181,7 @@ Reference code provided for educational purposes. Everything provided here is un
 
 <div align="center">
 
-**[📺 YouTube Channel](https://studio.youtube.com/)** | **[💬 Community](https://www.reddit.com/r/Project_NervLand/)**
+**[📺 YouTube Channel](https://www.youtube.com/channel/UCqyXrUfNuzIW5Pn1H9CIMSg/)** | **[💬 Community](https://www.reddit.com/r/Project_NervLand/)**
 
 _Building the future of graphics programming, one experiment at a time._
 
