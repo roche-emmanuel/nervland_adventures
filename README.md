@@ -169,7 +169,7 @@ GPU-based procedural Voronoi diagram generation with progressive complexity.
 
 ## 📬 Feedback & Questions
 
-Have questions about implementation details? Feel free to open an issue or reach out through the video comments.
+Have questions about implementation details? Feel free to open an issue or reach out through the video comments or ask on the [💬 project sub-reddit](https://www.reddit.com/r/Project_NervLand/)
 
 ---
 
