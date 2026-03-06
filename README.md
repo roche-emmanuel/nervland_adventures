@@ -1,100 +1,188 @@
-# NervLand Adventures
+# 🌟 NervLand Adventures
 
-Collection of small experiments and coding adventures with my NervLand engine providing some code snippets.
+Welcome to **NervLand Adventures** — a collection of experimental projects, technical demonstrations, and coding explorations built on the NervLand engine.
 
-**Important note**: Most of the experimental code provided here either directly or indirectly depends on the "NervLand" engine that I'm currently building on my own, and I'm keeping that project private for the moment, so you **wont be able to just take the code here and build it**. This repository is rather here to share some reference code snippets which you might use to generate some working code in your environment or simply to study the algorithms, etc.
+> **Note:** Most experiments here depend on my private **NervLand** engine. While you won't be able to build these projects directly, the code serves as valuable reference material for algorithms, implementation patterns, and WebGPU techniques.
 
-# The experiments
+---
 
-## 001 - WGPU Reduction algorithm
+## 🎯 About This Repository
 
-- Folder: **001_wgpu_reduction**
-- References:
-  - Video Tutorial Part 1: https://www.youtube.com/watch?v=198AoKCB90o
-  - Video Tutorial Part 2: https://www.youtube.com/watch?v=R0P9DDRCQ68
+This repository showcases various graphics programming experiments, rendering techniques, and procedural generation systems. Each experiment is documented with reference code, shader implementations, and accompanying video tutorials to help you understand and adapt these techniques for your own projects.
 
-This is currently provided as a single C++ unit test file and a collection of wgsl shader files implementing different versions of the reduction algorithm. The unit test will execute the computation with each version and monitor the time taken to compute the bandwidth of the compute shader.
+Whether you're interested in GPU computing, terrain rendering, procedural generation, or WebGPU development, you might find some interesting examples and insights here.
 
-## 002 - WGPU Prefix Sum
+This main page also provide access to the sub-projects online apps that you may freely test and use.
 
-- Folder: **002_wgpu_prefix_sum**
-- References:
-  - Video Tutorial: https://www.youtube.com/watch?v=wD2RezUqaxc
+---
 
-This experiment is a simple continuation from the previous one on the reduction algorithms, this time focusing on prefix-sum computation in WGSL. Again, we are only providing some minimal unit test code in C++ here and the different versions of the compute shaders which may be used as reference for integration into another WebGPU based engine.
+## 🚀 Featured Sub-Projects
 
-## 003 - WGPU Native/WASM app
+### [NervForge](https://nervtech.org/nervforge/) — Procedural Tree Generator
 
-- Folder: **003_wgpu_native_wasm_app**
-- References:
-  - Video Tutorial: **to be released**
+A powerful procedural 3D tree generation tool that allows you to create customizable tree models and export them as glTF files.
 
-In this folder you will find the 4 test applications I built to reach a simple code base which could now be used to build a WebGPU base app both as a native application or as a WASM application to run in your browser.
+**Key Features:**
 
-Those test apps do not depend on the NervLand libraries so it should be possible to build them with the provided code without too much trouble (assuming you have a proper emscripten toolchain available for the build process)
+- Multi-level branch generation with customizable density and distribution
+- Realistic branch physics with gnarliness and curvature controls
+- Dynamic leaf system with multiple textures and tint colors
+- Attraction/repulsion systems for natural branch distribution
+- Custom texture rendering and upload support
+- Export to glTF/GLB format for use in other 3D applications
+- Comprehensive configuration system with preset templates (Maple, Willow, etc.)
 
-## 004 - TerrainView5
+**Resources:**
 
-**TODO**
+- 🌐 [Try it online](https://nervtech.org/nervforge/)
+- 📺 Tutorial Series: **TODO** Videos 33-41 cover feature development and usage
 
-## 005 - TerrainView6
+---
 
-**TODO**
+### [TerrainView7](https://nervtech.org/terrainview7) — Atmospheric Scattering
 
-## 006 - TerrainView7
+![TerrainView7](images/terrainview7_preview.png)
 
-![TerrainView7](experiments/006_terrainview7/terrainview7_preview.png)
+An advanced terrain rendering demo featuring precomputed atmospheric scattering for realistic sky and lighting effects.
 
-The TerrainView7 tech demo app introduces support for the Precomputed Atmospheric Scattering on the terrain rendering layer.
+**Key Features:**
 
-- If your browser supports WebGPU, you can give this demo a try at: https://nervtech.org/terrainview7
-- And if you want a quick overview on the new features/changes I introduced in this release compared to the **TerrainView6**, you can check the companion video at: https://www.youtube.com/watch?v=85-VGX808xA
+- Precomputed atmospheric scattering implementation
+- Realistic sky rendering with day/night cycles
+- Advanced terrain LOD system
+- WebGPU-powered rendering pipeline
 
-## 007 - TerrainView8
+**Resources:**
 
-![TerrainView8](experiments/007_terrainview8/terrainview8_preview.png)
+- 🌐 [Live Demo](https://nervtech.org/terrainview7) (WebGPU required)
+- 📺 [Overview Video](https://www.youtube.com/watch?v=85-VGX808xA)
 
-The TerrainView8 tech demo app introduces support for **Real-time Realistic Ocean Lighting using Seamless Transitions from Geometry to BRDF**.
+---
 
-- If your browser supports WebGPU, you can give this demo a try at: https://nervtech.org/terrainview8
-- And if you want a quick overview on the new features introduced in this release you can check the companion video at: https://www.youtube.com/watch?v=uUomhFu364I
+### [TerrainView8](https://nervtech.org/terrainview8) — Realistic Ocean Rendering
 
-The ocean surface rendering is based on the implementation from Eric Bruneton's paper "Real-time Realistic Ocean Lighting using Seamless Transitions from Geometry to BRDF" (available at: https://hal.science/inria-00443630) which itself uses the model from Elfouhaily's paper "A unified directional spectrum for long and short wind-driven waves" (https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/97jc00467)
+![TerrainView8](images/terrainview8_preview.png)
 
-The main contribution I'm introducing here is a full port of the spectrum/slopes variance/FFT computation in WebGPU compute shaders (original version is computing the spectrum only on CPU) plus a few extensions to support foam display at the top of the waves and at shores, as well as dynamic control on the wind direction.
+Real-time ocean rendering with seamless transitions from geometry to BRDF, featuring dynamic waves and foam.
 
-This algorithm also handles displaying the sea bedrock surface under the water surface using a simple Beer-Lambert Law application.
+**Key Features:**
 
-There is still some work to do on this, including the following points:
+- Based on Eric Bruneton's ocean lighting research paper
+- Full WebGPU compute shader implementation for spectrum/FFT computation
+- Elfouhaily wave spectrum model for realistic wave patterns
+- Dynamic foam rendering at wave peaks and shores
+- Beer-Lambert Law for underwater bedrock visualization
+- Controllable wind direction and wave parameters
 
-- [ ] Support for underwater sea surface display
-- [ ] Caustics display
-- [ ] Improvements on the screen grid projection range
-- [ ] Local ocean parameters control
-- [ ] Better foam rendering and addition of sea spray
-- [ ] Improvements on the shore waves display
+**Resources:**
 
-## 008 - FFmpeg video Playback in Native WGPU
+- 🌐 [Live Demo](https://nervtech.org/terrainview8) (WebGPU required)
+- 📺 [Feature Overview](https://www.youtube.com/watch?v=uUomhFu364I)
+- 📄 [Research Paper](https://hal.science/inria-00443630)
 
-![FFmpeg Playback](experiments/008_ffmpeg_video_playback/ffmpeg_video_in_nervland.png)
+---
 
-This experiment was a simple test to try to use the "Shared Texture" API from Dawn by importing an ffmpeg video stream generated with DirectX 11.
+## 🧪 Technical Experiments
 
-The code files here are provided as **basic reference**, they will not compile out of the box as this depends on the NervLand engine which is not open-sourced for now. But this will anyway provide a good overview on most of the specific points to consider to setup the video stream playback with full hardware acceleration.
+### 001 — WGPU Reduction Algorithm
 
-**Note:** This experiment was implemented **on Windows only**, linux would require a different processing pipeline obviously 😄.
+GPU-based parallel reduction implementations with performance benchmarking.
 
-- A video tutorial on how to implement this feature is available at: https://www.youtube.com/watch?v=P1jxvLm6SwE
+- Multiple shader variants exploring different optimization strategies
+- Bandwidth monitoring and performance analysis
+- 📺 [Tutorial Part 1](https://www.youtube.com/watch?v=198AoKCB90o) | [Part 2](https://www.youtube.com/watch?v=R0P9DDRCQ68)
+- 📁 `001_wgpu_reduction/`
 
-## 009 - Procedural Voronoi Texture Generation
+---
 
-![Procedural Voronoi](experiments/009_procedural_voronoi/voronoi_quad_in_nervland.png)
+### 002 — WGPU Prefix Sum
 
-In this experiment we generate a Procedural Voronoi Texture from scratches in a compute shader.
+Parallel prefix sum (scan) algorithm implementation in WGSL compute shaders.
 
-The implementation was done iteratively to build it as a beginner friendly tutorial.
+- Building on reduction algorithm concepts
+- Multiple optimization variants
+- 📺 [Tutorial Video](https://www.youtube.com/watch?v=wD2RezUqaxc)
+- 📁 `002_wgpu_prefix_sum/`
 
-So in the experiment folder you will find different version of the shader used to do the computation with growing complexity.
+---
 
-- A video tutorial on how to implement this procedural texture generation is also available at: https://www.youtube.com/watch?v=kNgqw7HKzmg
-- And if you prefer a reading version I also have an article for this on dev.to: [Procedural Voronoi Texture generation in WGPU](https://dev.to/the_lone_engineer/tutorial-procedural-voronoi-texture-generation-in-wgpu-1b3k)
+### 003 — WGPU Native/WASM App
+
+Cross-platform WebGPU application framework supporting both native and web deployment.
+
+- **Self-contained** — No NervLand dependencies, can be built standalone
+- Emscripten toolchain for WASM compilation
+- Single codebase for native and browser targets
+- 📁 `003_wgpu_native_wasm_app/`
+
+---
+
+### 008 — FFmpeg Video Playback in Native WGPU
+
+![FFmpeg Playback](images/ffmpeg_video_in_nervland.png)
+
+Hardware-accelerated video playback using DirectX 11 and Dawn's Shared Texture API.
+
+- DirectX 11 video stream generation
+- WebGPU texture sharing and rendering
+- Full hardware acceleration pipeline
+- **Windows only** implementation
+- 📺 [Implementation Tutorial](https://www.youtube.com/watch?v=P1jxvLm6SwE)
+- 📁 `experiments/008_ffmpeg_video_playback/`
+
+---
+
+### 009 — Procedural Voronoi Texture Generation
+
+![Procedural Voronoi](images/voronoi_quad_in_nervland.png)
+
+GPU-based procedural Voronoi diagram generation with progressive complexity.
+
+- Beginner-friendly iterative implementation
+- Multiple shader versions showing progression
+- Complete compute shader workflow
+- 📺 [Video Tutorial](https://www.youtube.com/watch?v=kNgqw7HKzmg)
+- 📝 [Written Tutorial](https://dev.to/the_lone_engineer/tutorial-procedural-voronoi-texture-generation-in-wgpu-1b3k)
+- 📁 `experiments/009_procedural_voronoi/`
+
+---
+
+## 🛠️ Technologies
+
+- **WebGPU** — Modern GPU API for graphics and compute
+- **WGSL** — WebGPU Shading Language
+- **C++** — Core engine implementation
+- **Emscripten** — WASM compilation for web deployment
+- **glTF** — 3D model export format
+
+---
+
+## 🔗 Related Projects
+
+- **NervSDK** — Open-source framework with base components ([GitHub](https://github.com/roche-emmanuel/NervSDK))
+  - Custom glTF implementation (`sources/nvk/gltf`)
+  - Cross-platform base utilities
+  - Built with NervProj mechanism
+- **NervProj** — Open-source project management framework ([GitHub](https://github.com/roche-emmanuel/NervProj))
+
+---
+
+## 📬 Feedback & Questions
+
+Have questions about implementation details? Feel free to open an issue or reach out through the video comments.
+
+---
+
+## ⚖️ License
+
+Reference code provided for educational purposes. Everything provided here is under MT license.
+
+---
+
+<div align="center">
+
+**[📺 YouTube Channel](https://studio.youtube.com/)** | **[💬 Community](https://www.reddit.com/r/Project_NervLand/)**
+
+_Building the future of graphics programming, one experiment at a time._
+
+</div>
