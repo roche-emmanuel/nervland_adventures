@@ -43,7 +43,9 @@ A powerful procedural 3D tree generation tool that allows you to create customiz
   - 📝 [Companion Blog Article](https://wiki.nervtech.org/doku.php?id=blog:2026:0307_nervforge_tree_generator)
   - 📝 [Dev.to Article](https://dev.to/the_lone_engineer/nervforge-generate-beautiful-3d-trees-in-your-browser-free-tool-8n2)
 
-  _(More tutorials coming soon)_
+  [![NervForge New Features Update](https://img.youtube.com/vi/ryzXEzazNU0/maxresdefault.jpg)](https://www.youtube.com/watch?v=ryzXEzazNU0)
+
+  **[New Features Update](https://www.youtube.com/watch?v=ryzXEzazNU0)** — Per-level length scale, randomized branch density with prune factor, GLB export support, and NervSDK glTF implementation overview
 
 ---
 
