@@ -35,7 +35,15 @@ A powerful procedural 3D tree generation tool that allows you to create customiz
 **Resources:**
 
 - 🌐 [Try it online](https://nervtech.org/nervforge/)
-- 📺 Tutorial Series: **TODO** Videos 33-41 cover feature development and usage
+- 📺 **Tutorial Series:**
+
+  [![NervForge Introduction & Overview](https://img.youtube.com/vi/U93xS8r9G2o/maxresdefault.jpg)](https://www.youtube.com/watch?v=U93xS8r9G2o)
+
+  **[Introduction & Overview](https://www.youtube.com/watch?v=U93xS8r9G2o)** — Getting started with NervForge, basic controls, customization options, and glTF export
+  - 📝 [Companion Blog Article](https://wiki.nervtech.org/doku.php?id=blog:2026:0307_nervforge_tree_generator)
+  - 📝 [Dev.to Article](https://dev.to/the_lone_engineer/nervforge-generate-beautiful-3d-trees-in-your-browser-free-tool-8n2)
+
+  _(More tutorials coming soon)_
 
 ---
 
