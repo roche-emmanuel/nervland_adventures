@@ -39,13 +39,17 @@ A powerful procedural 3D tree generation tool that allows you to create customiz
 
   [![NervForge Introduction & Overview](https://img.youtube.com/vi/U93xS8r9G2o/maxresdefault.jpg)](https://www.youtube.com/watch?v=U93xS8r9G2o)
 
-  **[Introduction & Overview](https://www.youtube.com/watch?v=U93xS8r9G2o)** — Getting started with NervForge, basic controls, customization options, and glTF export
+  **[Introduction & Overview](https://www.youtube.com/watch?v=U93xS8r9G2o)** — Learn how to use NervForge to create customizable 3D tree models right in your browser. This tutorial covers the essential controls including branch level selection, child density adjustment, and the branchless ratio for controlling branch distribution. Discover how to use attraction points and repulsion intensity to create natural-looking branch patterns, apply gnarliness for realistic branch curvature, and customize leaves with various textures and density settings. The video also demonstrates the complete workflow from initial design to exporting your tree as a glTF file for use in other 3D applications.
   - 📝 [Companion Blog Article](https://wiki.nervtech.org/doku.php?id=blog:2026:0307_nervforge_tree_generator)
   - 📝 [Dev.to Article](https://dev.to/the_lone_engineer/nervforge-generate-beautiful-3d-trees-in-your-browser-free-tool-8n2)
 
   [![NervForge New Features Update](https://img.youtube.com/vi/ryzXEzazNU0/maxresdefault.jpg)](https://www.youtube.com/watch?v=ryzXEzazNU0)
 
-  **[New Features Update](https://www.youtube.com/watch?v=ryzXEzazNU0)** — Per-level length scale, randomized branch density with prune factor, GLB export support, and NervSDK glTF implementation overview
+  **[New Features Update](https://www.youtube.com/watch?v=ryzXEzazNU0)** — Explore three new features added to NervForge: per-level length scale control for better tree proportions, randomized branch density using the prune density factor for more natural variation, and GLB binary export support for smaller file sizes. This video also provides a behind-the-scenes look at the NervSDK open-source framework, including a detailed walkthrough of the custom glTF implementation found in the `sources/nvk/gltf` folder. See how the glTF classes are structured and learn about the straightforward process of creating glTF files programmatically.
+
+  [![NervForge Branch Textures](https://img.youtube.com/vi/f5rfesCwiF8/maxresdefault.jpg)](https://www.youtube.com/watch?v=f5rfesCwiF8)
+
+  **[Branch Textures & TreeIt Comparison](https://www.youtube.com/watch?v=f5rfesCwiF8)** — Branch texture support has arrived! This update introduces 5 bark textures with controllable UV density parameters for both horizontal and vertical tiling. The video explores TreeIt, an impressive tree generation tool that serves as inspiration for future NervForge features including multiple branches at the same location, improved trunk base modeling, and palm tree support. Also covered are important technical fixes for glTF accessor alignment errors and WASM texture loading issues, plus plans for making UV density a per-level setting.
 
 ---
 
