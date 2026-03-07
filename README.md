@@ -35,21 +35,114 @@ A powerful procedural 3D tree generation tool that allows you to create customiz
 **Resources:**
 
 - 🌐 [Try it online](https://nervtech.org/nervforge/)
-- 📺 **Tutorial Series:**
 
-  [![NervForge Introduction & Overview](https://img.youtube.com/vi/U93xS8r9G2o/maxresdefault.jpg)](https://www.youtube.com/watch?v=U93xS8r9G2o)
+---
 
-  **[Introduction & Overview](https://www.youtube.com/watch?v=U93xS8r9G2o)** — Learn how to use NervForge to create customizable 3D tree models right in your browser. This tutorial covers the essential controls including branch level selection, child density adjustment, and the branchless ratio for controlling branch distribution. Discover how to use attraction points and repulsion intensity to create natural-looking branch patterns, apply gnarliness for realistic branch curvature, and customize leaves with various textures and density settings. The video also demonstrates the complete workflow from initial design to exporting your tree as a glTF file for use in other 3D applications.
-  - 📝 [Companion Blog Article](https://wiki.nervtech.org/doku.php?id=blog:2026:0307_nervforge_tree_generator)
-  - 📝 [Dev.to Article](https://dev.to/the_lone_engineer/nervforge-generate-beautiful-3d-trees-in-your-browser-free-tool-8n2)
+#### 📺 Tutorial Series
 
-  [![NervForge New Features Update](https://img.youtube.com/vi/ryzXEzazNU0/maxresdefault.jpg)](https://www.youtube.com/watch?v=ryzXEzazNU0)
+<details open>
+<summary><b>Introduction & Overview</b></summary>
 
-  **[New Features Update](https://www.youtube.com/watch?v=ryzXEzazNU0)** — Explore three new features added to NervForge: per-level length scale control for better tree proportions, randomized branch density using the prune density factor for more natural variation, and GLB binary export support for smaller file sizes. This video also provides a behind-the-scenes look at the NervSDK open-source framework, including a detailed walkthrough of the custom glTF implementation found in the `sources/nvk/gltf` folder. See how the glTF classes are structured and learn about the straightforward process of creating glTF files programmatically.
+[![NervForge Introduction & Overview](https://img.youtube.com/vi/U93xS8r9G2o/maxresdefault.jpg)](https://www.youtube.com/watch?v=U93xS8r9G2o)
 
-  [![NervForge Branch Textures](https://img.youtube.com/vi/f5rfesCwiF8/maxresdefault.jpg)](https://www.youtube.com/watch?v=f5rfesCwiF8)
+**[🎦 Watch on YouTube](https://www.youtube.com/watch?v=U93xS8r9G2o)**
 
-  **[Branch Textures & TreeIt Comparison](https://www.youtube.com/watch?v=f5rfesCwiF8)** — Branch texture support has arrived! This update introduces 5 bark textures with controllable UV density parameters for both horizontal and vertical tiling. The video explores TreeIt, an impressive tree generation tool that serves as inspiration for future NervForge features including multiple branches at the same location, improved trunk base modeling, and palm tree support. Also covered are important technical fixes for glTF accessor alignment errors and WASM texture loading issues, plus plans for making UV density a per-level setting.
+Learn how to use NervForge to create customizable 3D tree models right in your browser. This tutorial covers the essential controls including branch level selection, child density adjustment, and the branchless ratio for controlling branch distribution. Discover how to use attraction points and repulsion intensity to create natural-looking branch patterns, apply gnarliness for realistic branch curvature, and customize leaves with various textures and density settings. The video also demonstrates the complete workflow from initial design to exporting your tree as a glTF file for use in other 3D applications.
+
+📝 [Companion Blog Article](https://wiki.nervtech.org/doku.php?id=blog:2026:0307_nervforge_tree_generator) | [Dev.to Article](https://dev.to/the_lone_engineer/nervforge-generate-beautiful-3d-trees-in-your-browser-free-tool-8n2)
+
+</details>
+
+---
+
+<details open>
+<summary><b>New Features Update</b></summary>
+
+[![NervForge New Features Update](https://img.youtube.com/vi/ryzXEzazNU0/maxresdefault.jpg)](https://www.youtube.com/watch?v=ryzXEzazNU0)
+
+**[🎦 Watch on YouTube](https://www.youtube.com/watch?v=ryzXEzazNU0)**
+
+Explore three new features added to NervForge: per-level length scale control for better tree proportions, randomized branch density using the prune density factor for more natural variation, and GLB binary export support for smaller file sizes. This video also provides a behind-the-scenes look at the NervSDK open-source framework, including a detailed walkthrough of the custom glTF implementation found in the `sources/nvk/gltf` folder. See how the glTF classes are structured and learn about the straightforward process of creating glTF files programmatically.
+
+</details>
+
+---
+
+<details open>
+<summary><b>Branch Textures & TreeIt Comparison</b></summary>
+
+[![NervForge Branch Textures](https://img.youtube.com/vi/f5rfesCwiF8/maxresdefault.jpg)](https://www.youtube.com/watch?v=f5rfesCwiF8)
+
+**[🎦 Watch on YouTube](https://www.youtube.com/watch?v=f5rfesCwiF8)**
+
+Branch texture support has arrived! This update introduces 5 bark textures with controllable UV density parameters for both horizontal and vertical tiling. The video explores TreeIt, an impressive tree generation tool that serves as inspiration for future NervForge features including multiple branches at the same location, improved trunk base modeling, and palm tree support. Also covered are important technical fixes for glTF accessor alignment errors and WASM texture loading issues, plus plans for making UV density a per-level setting.
+
+</details>
+
+---
+
+<details open>
+<summary><b>Configuration System & External Textures</b></summary>
+
+[![NervForge Configuration System](https://img.youtube.com/vi/Y79s1KmwSTU/maxresdefault.jpg)](https://www.youtube.com/watch?v=Y79s1KmwSTU)
+
+**[🎦 Watch on YouTube](https://www.youtube.com/watch?v=Y79s1KmwSTU)**
+
+Major workflow improvements with the introduction of a base configuration system for tree presets. This update adds the ability to save and load custom configurations as JSON files, allowing you to build a library of reusable tree templates. New features include per-level UV density parameters for precise texture control on each branch level, per-level attractor positioning for creative branch direction control (like downward-curving branches at one level and upward at another), and external texture storage to keep large files out of the main repository. The configuration system includes reset, save, and load buttons for easy preset management.
+
+</details>
+
+---
+
+<details open>
+<summary><b>Debug Build & Performance Fixes</b></summary>
+
+[![NervForge Debug Build & Performance](https://img.youtube.com/vi/hzfgqXZuWcM/maxresdefault.jpg)](https://www.youtube.com/watch?v=hzfgqXZuWcM)
+
+**[🎦 Watch on YouTube](https://www.youtube.com/watch?v=hzfgqXZuWcM)**
+
+A deep dive into debugging and performance optimization. This technical update covers setting up debug builds with Emscripten source maps for proper C++ debugging in browser dev tools, fixing a critical crash caused by using raw pointers instead of reference pointers in render pass callbacks, and eliminating unnecessary pipeline regeneration when modifying tree settings. The result is dramatically improved performance in the native version, with settings now adjustable in near real-time even for large trees. Also includes the addition of several new leaf textures to expand customization options.
+
+</details>
+
+---
+
+<details open>
+<summary><b>Dynamic Textures & Branch Multiplicity</b></summary>
+
+[![NervForge Dynamic Textures & Multiplicity](https://img.youtube.com/vi/OwNVwDqj3bs/maxresdefault.jpg)](https://www.youtube.com/watch?v=OwNVwDqj3bs)
+
+**[🎦 Watch on YouTube](https://www.youtube.com/watch?v=OwNVwDqj3bs)**
+
+Major usability improvements and new branch control features. This update introduces dynamic texture loading that automatically discovers bark and leaf textures from their respective folders, eliminating manual configuration entries. A scrollbar implementation now handles large texture lists with mouse wheel support. Custom texture upload allows you to load textures directly from your computer and apply them instantly. The highlight is branch multiplicity (node multiplicity), enabling multiple branches to spawn from the same location with controllable position offset for natural distribution. Additional features include child up angle control for precise branch orientation, start spiral angle for controlling initial branch placement around the parent, and UV coordinate flipping for upside-down leaf textures. Includes a new maple tree preset configuration inspired by TreeIt.
+
+</details>
+
+---
+
+<details open>
+<summary><b>Willow Trees & Custom Leaf Rendering</b></summary>
+
+[![NervForge Willow Trees & Leaf Rendering](https://img.youtube.com/vi/tS_L_dkh1LA/maxresdefault.jpg)](https://www.youtube.com/watch?v=tS_L_dkh1LA)
+
+**[🎦 Watch on YouTube](https://www.youtube.com/watch?v=tS_L_dkh1LA)**
+
+Major advancement with custom leaf texture rendering and realistic leaf deformation. The new render tab allows you to generate custom leaf textures by capturing any part of your tree with adjustable field of view, resolution, and aspect ratio controls. Leaf rendering now supports subdivision with U and V resolution parameters, enabling realistic bending and drooping effects controlled by leaf curve, attraction direction, and power/scale parameters. This update includes a complete walkthrough of building a willow tree configuration from scratch, demonstrating the full workflow from creating a custom willow leaf texture to assembling a realistic drooping willow tree. Also includes a critical memory leak fix preventing mesh data accumulation, and improved configuration file management with automatic folder-based config discovery.
+
+</details>
+
+---
+
+<details open>
+<summary><b>Tint Colors for Bark & Leaves</b></summary>
+
+[![NervForge Tint Colors](https://img.youtube.com/vi/kVeFY2sItlk/maxresdefault.jpg)](https://www.youtube.com/watch?v=kVeFY2sItlk)
+
+**[🎦 Watch on YouTube](https://www.youtube.com/watch?v=kVeFY2sItlk)**
+
+Simple but powerful color customization feature. This update adds tint color support for both bark and leaves, allowing you to apply color multipliers to textures for creative effects. The bark tint checkbox on the tree designer panel lets you colorize the entire trunk and branches, while the leaf tint checkbox on the leaves tab provides separate color control for foliage. Both features can be toggled on/off to optimize mesh size when not needed, and tint colors are properly preserved during glTF export, maintaining texture details underneath the color overlay.
+
+</details>
 
 ---
 
