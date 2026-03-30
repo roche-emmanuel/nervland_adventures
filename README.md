@@ -146,6 +146,34 @@ Simple but powerful color customization feature. This update adds tint color sup
 
 ---
 
+<details open>
+<summary><b>Building Initial Bush Config</b></summary>
+
+[![NervForge Building Initial Bush Config](https://img.youtube.com/vi/sP6pKIvyMi8/maxresdefault.jpg)](https://www.youtube.com/watch?v=sP6pKIvyMi8)
+
+**[🎦 Watch on YouTube](https://www.youtube.com/watch?v=sP6pKIvyMi8)**
+
+Taking NervForge from computer-generated looking bushes to natural, realistic vegetation through several targeted fixes and optimizations. Covers moving from single-origin spawning to disc/square spawn areas for natural root distribution, a font architecture refactor to eliminate widget-to-canvas dependencies, and a fix for invisible child widgets caused by missing parent reference propagation. The centerpiece is the self-repulsion system — preventing branches from intersecting at the root level — including a full performance journey from 16ms to 364ms back down to 58ms through deferred repulsion levels, spatial grid optimization, and weighted center-of-mass approximation per grid cell. Also includes global uniform/non-uniform scale controls and proportional leaf width curves based on leaf length.
+
+📝 [Companion Blog Article](https://wiki.nervtech.org/doku.php?id=blog:2026:0314_initial_bush_config)
+
+</details>
+
+---
+
+<details open>
+<summary><b>Dynamic Texture Loading with Async Promise System</b></summary>
+
+[![NervForge Dynamic Texture Loading](https://img.youtube.com/vi/NkUmhi6WMio/maxresdefault.jpg)](https://www.youtube.com/watch?v=NkUmhi6WMio)
+
+**[🎦 Watch on YouTube](https://www.youtube.com/watch?v=NkUmhi6WMio)**
+
+A focused update introducing on-demand texture loading to NervForge, powered by a new promise-based async system in NervSDK. Textures are now listed in a remote resource manifest and downloaded only when selected, replacing the previous approach of bundling everything upfront. While a texture downloads, a checkerboard placeholder material is shown in its place; once the download completes, the resolution callback executes on the main thread and triggers a recursive `setLeafTexture` call to finalize the material swap. Downloaded textures are cached locally so they persist across sessions without redundant re-fetches. Also includes a fix for black artifacts appearing at the planet horizon level.
+
+</details>
+
+---
+
 ### [TerrainView7](https://nervtech.org/terrainview7) — Atmospheric Scattering
 
 ![TerrainView7](images/terrainview7_preview.png)
